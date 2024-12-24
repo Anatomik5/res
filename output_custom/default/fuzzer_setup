@@ -1,0 +1,10 @@
+# environment variables:
+AFL_CUSTOM_MUTATOR_LIBRARY=/home/alisher/test/AFLplusplus-4.21c/custom_mutators/aflpp/aflpp-mutator.so
+AFL_CUSTOM_MUTATOR_ONLY=1
+AFL_CUSTOM_INFO_PROGRAM=/home/alisher/arm_sim_fuzz/qemu/build/qemu-system-aarch64
+AFL_CUSTOM_INFO_PROGRAM_ARGV=-M virt -cpu cortex-a72 -display none -serial stdio -kernel @@
+AFL_CUSTOM_INFO_OUT=/home/alisher/arm_sim_fuzz/output_custom//default
+AFL_DISABLE_TRIM=1
+AFL_SKIP_CPUFREQ=1
+# command line:
+'/home/alisher/test/AFLplusplus-4.21c/afl-fuzz' '-P' 'explore' '-i' 'input_elf/' '-o' '/home/alisher/arm_sim_fuzz/output_custom/' '--' '/home/alisher/arm_sim_fuzz/qemu/build/qemu-system-aarch64' '-M' 'virt' '-cpu' 'cortex-a72' '-display' 'none' '-serial' 'stdio' '-kernel' '@@'

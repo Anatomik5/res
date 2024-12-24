@@ -1,0 +1,9 @@
+/home/alisher/arm_sim_fuzz/qemu/build/qemu-system-aarch64
+-M
+virt
+-cpu
+cortex-a72
+-display
+none
+-kernel
+@@

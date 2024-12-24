@@ -1,0 +1,10 @@
+# environment variables:
+AFL_CUSTOM_INFO_PROGRAM=/home/alisher/arm_sim_fuzz/qemu/build/qemu-system-aarch64
+AFL_CUSTOM_INFO_PROGRAM_ARGV=-M virt -cpu cortex-a72 -display none -kernel @@
+AFL_CUSTOM_INFO_OUT=no_nop//default
+AFL_DISABLE_TRIM=1
+AFL_MAP_SIZE=287195
+AFL_SKIP_BIN_CHECK=1
+AFL_SKIP_CPUFREQ=1
+# command line:
+'/home/alisher/test/AFLplusplus-4.21c/afl-fuzz' '-P' 'explore' '-i' 'input_elf/' '-o' 'no_nop/' '--' '/home/alisher/arm_sim_fuzz/qemu/build/qemu-system-aarch64' '-M' 'virt' '-cpu' 'cortex-a72' '-display' 'none' '-kernel' '@@'
